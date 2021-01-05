@@ -2,7 +2,7 @@ let mainBg = document.getElementById('mainBg');
 let checkList = document.getElementById('checkList');
 let listInput = document.getElementById('listInput');
 let info = document.getElementById('info');
-let saveBtn = document.getElementById('saveBtn');
+// let saveBtn = document.getElementById('saveBtn');
 let addBtn = document.getElementById('addBtn');
 let settings = document.getElementById('settings');
 let mainPage = document.getElementById('mainPage');
@@ -123,10 +123,12 @@ function createItem(content, uid, checked) {
     divElement.appendChild(anchorElement);
 }
 
-saveBtn.onclick = function() {
+
+function save() {
     let stringifiedTodoList = JSON.stringify(todoList);
     localStorage.setItem('todoList', stringifiedTodoList);
 }
+
 
 function addItem() {
     if (listInput.value === '') {
